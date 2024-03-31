@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        dark: "var(--dark)",
+        purple: "var(--purple)",
+        borderColor: "var(--borderColor)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
