@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div>
       <div
-        className="relative h-[40vh] md:h-[65vh] lg:h-[80vh] w-full"
+        className="relative h-[40vh] md:h-[70vh] lg:h-[80vh] w-full"
         style={{
           backgroundImage: `url("https://i.ibb.co/WVdtY83/banner.jpg")`,
           backgroundSize: "cover",
@@ -16,8 +16,62 @@ const Banner = () => {
         <div className="absolute inset-0 bg-white opacity-40"></div>
 
         <Container>
-          <div className="relative">
-            <div className="h-72 absolute right-0 w-20  bg-white lg:top-20"></div>
+          <div className="relative hidden md:block lg:block md:top-4">
+            <div className=" border rounded-md absolute right-0 p-6 lg:p-10  bg-white lg:top-20">
+              <div className="space-y-1 lg:space-y-2">  
+                <form>
+                  <div className="flex justify-between mb-2 lg:mb-3 flex-col lg:flex-row items-center gap-4">
+                    <span className="text-dark w-full lg:w-1/2">
+                      Types of Biodata
+                    </span>
+                    <select
+                      className="py-2  w-full lg:w-1/2 px-4 text-white rounded-md bg-purple"
+                      name="biodata"
+                      id="biodata"
+                    >
+                      <option selected value="">
+                        All Biodata
+                      </option>
+                      <option value="">Boy biodata</option>
+                      <option value="">girl biodata</option>
+                    </select>
+                  </div>
+
+                  <div className="flex justify-between mb-2 flex-col lg:flex-row items-center gap-4">
+                    <span className="text-dark  w-full lg:w-1/2 ">
+                      Marital status
+                    </span>
+                    <select
+                      className="py-2 w-full lg:w-1/2 mb-2 px-4 text-white rounded-md bg-purple"
+                      name="status"
+                      id="status"
+                    >
+                      <option selected value="">
+                        All Status
+                      </option>
+                      <option value="married">Married</option>
+                      <option value="single">Single</option>
+                    </select>
+                  </div>
+
+                  <div className="flex mb-3 flex-col lg:flex-row items-center gap-4">
+                    <span className="text-dark w-full lg:w-1/2 ">
+                      Bio Data Number
+                    </span>
+                    <input
+                      className="py-2 px-4  w-full lg:w-1/2 rounded-md border-2 border-slate-300 focus:outline-blue-400 shadow-md"
+                      type="text"
+                      name="number"
+                      id=""
+                    />
+                  </div>
+
+                  <div className="block text-end ">
+                    <button type="submit" className="border w-full lg:w-[48%] rounded-md border-borderColor text-purple py-[5px] px-">Search</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </Container>
       </div>
