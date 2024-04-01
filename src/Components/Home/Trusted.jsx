@@ -13,8 +13,8 @@ const Trusted = () => {
             Trusted by Millions
           </h2>
           <p className="my-2 font-medium">
-            "Love doesn make the world go around. Love is what makes the ride
-            worthwhile." Millions of Active Matrimonial <br /> users around the
+            Love doesn make the world go around. Love is what makes the ride
+            worthwhile. Millions of Active Matrimonial <br /> users around the
             world find their true love and partners from this site. We are
             always there to help and find you the <br /> suitable match for
             yourself.

@@ -46,7 +46,7 @@ const TotalCategory = () => {
             >
               <div className="space-y-1 lg:space-y-2 text-center">
                 <Image
-                  className="mx-auto w-full lg:h-[125px] lg:w-[140px]"
+                  className="mx-auto w-full h-[90px] md:h-[115px] lg:h-[125px] lg:w-[140px]"
                   src={category.image}
                   height={60}
                   width={80}
