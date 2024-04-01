@@ -55,7 +55,7 @@ const PremiumMember = () => {
           }}
         >
           {data.map((item, i) => (
-            <SwiperSlide className=" border shadow-md bg-[#E6E6E6]">
+            <SwiperSlide key={i} className=" border shadow-md bg-[#E6E6E6]">
               <div className="mx-auto  text-center mb-3">
                 <div className="relative">
                   <Image

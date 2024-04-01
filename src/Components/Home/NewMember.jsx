@@ -22,7 +22,7 @@ const NewMember = () => {
           </h2>
           <p className="my-2 font-medium">
             Every user registered on Muslim Marriagebd is verified via photo and
-            mobile phone so you don’t have to worry how <br /> real or fake
+            mobile phone so you dont have to worry how <br /> real or fake
             anyone is..
           </p>
         </div>
@@ -60,7 +60,7 @@ const NewMember = () => {
             }}
           >
             {data.map((item, i) => (
-              <SwiperSlide className=" border shadow-md bg-[#E6E6E6]">
+              <SwiperSlide key={i} className=" border shadow-md bg-[#E6E6E6]">
                 <div className="mx-auto  text-center mb-3">
                   <div className="relative">
                     <Image
