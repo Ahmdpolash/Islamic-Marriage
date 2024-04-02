@@ -19,6 +19,7 @@ const ProductDetails = () => {
   const [currentImage, setCurrentImage] = useState(images[0]);
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
 
   const handleIncrement = () => {
     if (quantity > 0) {
@@ -38,9 +39,7 @@ const ProductDetails = () => {
     <div className="my-3">
       <Container>
         {/* breadcrumb */}
-        <div>
-          <SharedBreadcrumb />
-        </div>
+        <div>{/* <SharedBreadcrumb /> */}</div>
 
         <div className="my-4 lg:my-6 pt-4 lg:pt-6 lg:pb-5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
@@ -98,6 +97,32 @@ const ProductDetails = () => {
                     <h3 className="font-medium text-dark lg:text-[17px] text-[16px]">
                       Colours :
                     </h3>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <div
+                        className={` h-[22px] w-[22px] bg-[#E07575] rounded-full  pt-1 ${
+                          selectedColor === "red"
+                            ? " border-2 border-primaryPurple"
+                            : " "
+                        }`}
+                        onClick={() => setSelectedColor("red")}
+                      ></div>
+                      <div
+                        className={` h-[22px] w-[22px] bg-green-600 rounded-full  pt-1 ${
+                          selectedColor === "green"
+                            ? " border-2 border-primaryPurple"
+                            : " "
+                        }`}
+                        onClick={() => setSelectedColor("green")}
+                      ></div>
+                      <div
+                        className={` h-[22px] w-[22px] bg-pink-600 rounded-full  pt-1 ${
+                          selectedColor === "pink"
+                            ? " border-2 border-primaryPurple"
+                            : " "
+                        }`}
+                        onClick={() => setSelectedColor("pink")}
+                      ></div>
+                    </div>
                   </div>
 
                   <div className="flex cursor-pointer gap-2 items-center">

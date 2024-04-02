@@ -16,21 +16,13 @@ const SharedBreadcrumb = () => {
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink>
-              {typeof window !== "undefined" ? (
-                <Link href="/">Home</Link>
-              ) : (
-                <a href="/">Home</a>
-              )}
+              <Link href="/">Home</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink>
-              {typeof window !== "undefined" ? (
-                <Link href="/shop">Shop</Link>
-              ) : (
-                <a href="/shop">Shop</a>
-              )}
+              <Link href="/shop">Shop</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />

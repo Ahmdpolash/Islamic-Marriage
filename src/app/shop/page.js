@@ -64,9 +64,11 @@ const Shop = () => {
               ))}
             </div>
 
-          <div className="flex justify-center items-center mx-auto">
-            <button className="border border-purple mx-auto rounded-md py-2 px-5 font-medium">View All Products</button>
-          </div>
+            <div className="flex justify-center items-center mx-auto">
+              <button className="border border-purple mx-auto rounded-md py-2 px-5 font-medium">
+                View All Products
+              </button>
+            </div>
           </div>
 
           {/* right side content */}
@@ -145,8 +147,6 @@ const Shop = () => {
                   )
                 )}
               </div>
-
-              
             </div>
           </div>
         </div>
