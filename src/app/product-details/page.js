@@ -1,6 +1,5 @@
 "use client";
 import Container from "@/Components/shared/Container";
-import SharedBreadcrumb from "@/Components/shared/SharedBreadcrumb";
 import data from "../../Components/data/shop.json";
 import Link from "next/link";
 import Image from "next/image";
