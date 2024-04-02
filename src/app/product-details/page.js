@@ -47,7 +47,7 @@ const ProductDetails = () => {
               <div className="lg:w-[20%] order-2 lg:order-1 h-full">
                 <div className="flex  flex-row mx-auto lg:flex-col  gap-3">
                   {images.map((image, i) => (
-                    <button
+                    <button key={i}
                       className="w-full"
                       onClick={() => setCurrentImage(image)}
                     >
