@@ -3,6 +3,7 @@ import data from "../../Components/data/shop.json";
 import redPanjabi from "../../assets/shop/red.png";
 import women from "../../assets/shop/women.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Shop = () => {
   return (
@@ -36,7 +37,7 @@ const Shop = () => {
               </form>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-5">
+            <div className="grid cursor-pointer grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-5">
               {data.map((item, i) => (
                 <div className=" " key={i}>
                   <Image
@@ -46,18 +47,26 @@ const Shop = () => {
                     width={120}
                     alt="product"
                   />
-                  <div className="space-y-2 mt-2 p-2 mb-4 lg:mb-6">
-                    <h1 className="font-semibold text-[15px]">{item.name}</h1>
-                    <div className="flex items-center gap-2">
-                      <p className="text-[14px] text-[#9A236F]">
-                        ${item.current}
-                      </p>
-                      <p className="text-[14px] text-slate-400">${item.old}</p>
+                  <Link href="/product-details">
+                    <div className="space-y-2 mt-2 p-2 mb-4 lg:mb-6">
+                      <h1 className="font-semibold text-[15px]">{item.name}</h1>
+                      <div className="flex items-center gap-2">
+                        <p className="text-[14px] text-[#9A236F]">
+                          ${item.current}
+                        </p>
+                        <p className="text-[14px] text-slate-400">
+                          ${item.old}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
+
+          <div className="flex justify-center items-center mx-auto">
+            <button className="border border-purple mx-auto rounded-md py-2 px-5 font-medium">View All Products</button>
+          </div>
           </div>
 
           {/* right side content */}
@@ -87,7 +96,7 @@ const Shop = () => {
                 </form>
               </div>
 
-              <div className="grid grid-cols-2 mx-auto  gap-2">
+              <div className="grid cursor-pointer grid-cols-2 mx-auto  gap-2">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(
                   (pt, index) => (
                     <div key={index}>
@@ -99,15 +108,17 @@ const Shop = () => {
                           width={120}
                           alt="panjabi"
                         />
-                        <div className="space-y-2 mt-1 mb-2 lg:mb-3">
-                          <h1 className="font-semibold text-[13px]">
-                            HAVIT HV-G92....
-                          </h1>
-                          <div className="flex items-center gap-2">
-                            <p className="text-[14px] text-[#9A236F]">$425</p>
-                            <p className="text-[14px] text-slate-400">$650</p>
+                        <Link href="/product-details">
+                          <div className="space-y-2 mt-1 mb-2 lg:mb-3">
+                            <h1 className="font-semibold text-[13px]">
+                              HAVIT HV-G92....
+                            </h1>
+                            <div className="flex items-center gap-2">
+                              <p className="text-[14px] text-[#9A236F]">$425</p>
+                              <p className="text-[14px] text-slate-400">$650</p>
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </div>
 
                       <div className=" ">
@@ -118,20 +129,24 @@ const Shop = () => {
                           width={120}
                           alt="panjabi"
                         />
-                        <div className="space-y-2 mt-1 mb-2 lg:mb-3">
-                          <h1 className="font-semibold text-[13px]">
-                            HAVIT HV-G92....
-                          </h1>
-                          <div className="flex items-center gap-2">
-                            <p className="text-[14px] text-[#9A236F]">$425</p>
-                            <p className="text-[14px] text-slate-400">$650</p>
+                        <Link href="/product-details">
+                          <div className="space-y-2 mt-1 mb-2 lg:mb-3">
+                            <h1 className="font-semibold text-[13px]">
+                              HAVIT HV-G92....
+                            </h1>
+                            <div className="flex items-center gap-2">
+                              <p className="text-[14px] text-[#9A236F]">$425</p>
+                              <p className="text-[14px] text-slate-400">$650</p>
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </div>
                     </div>
                   )
                 )}
               </div>
+
+              
             </div>
           </div>
         </div>

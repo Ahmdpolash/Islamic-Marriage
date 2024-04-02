@@ -8,9 +8,11 @@ import logo from "../../assets/logo.png";
 import Image from "next/image";
 import Container from "./Container";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -18,22 +20,53 @@ const Navbar = () => {
 
   const navList = (
     <>
-      <Link href="/" className="lg:ml-4">
+      <Link
+        href="/"
+        className={`${
+          pathname === "/" ? "text-purple font-semibold" : ""
+        } lg:ml-4`}
+      >
         Home
       </Link>
-      <Link href="/plan" className="lg:ml-4">
+      <Link
+        href="/plan"
+        className={`${
+          pathname === "/plan" ? "text-purple font-semibold" : ""
+        } lg:ml-4`}
+      >
         Plan
       </Link>
-      <Link href="/shop" className="lg:ml-4">
+      <Link
+        href="/shop"
+        className={`${
+          pathname === "/shop" ? "text-purple font-semibold" : ""
+        } lg:ml-4`}
+      >
         Shop
       </Link>
-      <Link href="/community-center" className="lg:ml-4">
+      <Link
+        href="/community-center"
+        className={`${
+          pathname === "/community-center" ? "text-purple font-semibold" : ""
+        } lg:ml-4`}
+      >
         Community Center
       </Link>
-      <Link href="/kazi-office" className="lg:ml-4">
+      <Link
+        href="/kazi-office"
+        cl
+        className={`${
+          pathname === "/kazi-office" ? "text-purple font-semibold" : ""
+        } lg:ml-4`}
+      >
         Kazi Office
       </Link>
-      <Link href="/contact-us" className="lg:ml-4">
+      <Link
+        href="/contact-us"
+        className={`${
+          pathname === "/contact-us" ? "text-purple font-semibold" : ""
+        } lg:ml-4`}
+      >
         Contact Us
       </Link>
     </>
