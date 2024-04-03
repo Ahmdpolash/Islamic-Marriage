@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
-import { FaUser } from "react-icons/fa6";
+import { FaCartShopping, FaUser } from "react-icons/fa6";
 
 import logo from "../../assets/logo.png";
 import Image from "next/image";
@@ -128,7 +128,12 @@ const Navbar = () => {
             <div className="flex  items-center gap-5">
               {/* Desktop menu */}
               <div className="hidden lg:block">
-                <ul className="lg:flex lg:gap-3">{navList}</ul>
+                <ul className="lg:flex lg:gap-3">
+                  {navList}
+                  <button className="hidden lg:flex items-center gap-1 lg:ml-4 ">
+                    <FaCartShopping className=" text-[22px] " />
+                  </button>
+                </ul>
               </div>
 
               <div className="flex items-center">

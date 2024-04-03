@@ -18,7 +18,7 @@ const KaziOffice = () => {
                 width={120}
                 alt="community-center"
               />
-              <Link href="/product-details">
+              <Link href="/single-kazi-office">
                 <div className="space-y-2 mt-2  text-dark p-2 mb-4 lg:mb-6">
                   <h1 className="font-semibold text-[15px] tracking-wide">{item.name}</h1>
                   <h3 className="font-medium text-slate-600 text-[14px]">{item.owner}</h3>

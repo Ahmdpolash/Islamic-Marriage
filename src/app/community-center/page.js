@@ -18,7 +18,7 @@ const CommunityCenter = () => {
                 width={120}
                 alt="community-center"
               />
-              <Link href="/product-details">
+              <Link href="/single-community">
                 <div className="space-y-2 mt-2 p-2 mb-4 lg:mb-6">
                   <h1 className="font-semibold text-[15px]">{item.name}</h1>
                   <div className="flex items-center gap-2">
