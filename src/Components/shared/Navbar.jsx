@@ -83,15 +83,18 @@ const Navbar = () => {
       <div className="border-b shadow-md">
         <Container>
           <div className="flex  justify-between items-center">
-            <div className="logo">
-              <Image
-                className="w-[60px]"
-                src={logo}
-                height={60}
-                width={120}
-                alt="logo"
-              />
-            </div>
+            <Link href='/'>
+              {" "}
+              <div className="logo">
+                <Image
+                  className="w-[60px]"
+                  src={logo}
+                  height={60}
+                  width={120}
+                  alt="logo"
+                />
+              </div>
+            </Link>
 
             {/* Mobile menu */}
             <div

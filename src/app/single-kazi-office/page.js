@@ -36,7 +36,7 @@ const SingleKaziOffice = () => {
               <div className="w-full lg:w-[70%] ">
                 <div className="lg:h-full">
                   <Image
-                    className="w-full border rounded-md shadow-md h-[190px] md:h-[280px] lg:h-full"
+                    className="w-full border rounded-md shadow-md h-[210px] md:h-[280px] lg:h-full"
                     src={currentImage}
                     height={60}
                     width={200}
@@ -47,7 +47,7 @@ const SingleKaziOffice = () => {
             </div>
 
             {/* details */}
-            <div className="max-w-lg text-dark mt-3 lg:mt-0 col-span- w-full ">
+            <div className="max-w-lg order-3 lg:order-2 text-dark mt-3 lg:mt-0 col-span- w-full ">
               <div className="space-y-3">
                 <h1 className="text-xl lg:text-2xl font-semibold">
                   Loving Sunrise
@@ -92,7 +92,7 @@ const SingleKaziOffice = () => {
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-5 order-2 lg:order-3">
             <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 mx-auto  gap-3">
               {images.map((image, i) => (
                 <button

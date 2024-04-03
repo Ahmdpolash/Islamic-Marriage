@@ -37,23 +37,21 @@ const NewMember = () => {
             modules={[Pagination]}
             className="mySwiper h-full  "
             breakpoints={{
-              // when window width is >= 640px
+              375: {
+                slidesPerView: 2,
+              },
               425: {
                 slidesPerView: 2,
               },
-              // when window width is >= 768px
               768: {
                 slidesPerView: 3,
               },
-              // when window width is >= 1024px
               1024: {
                 slidesPerView: 4,
               },
-              // when window width is >= 1280px
               1280: {
                 slidesPerView: 5,
               },
-              // when window width is >= 1536px
               1536: {
                 slidesPerView: 6,
               },
