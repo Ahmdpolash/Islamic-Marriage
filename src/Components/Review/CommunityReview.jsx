@@ -98,7 +98,7 @@ const CommunityReview = () => {
       </h2>
       <div className=" w-full lg:w-[70%]">
         {[1, 2, 3].map((r, i) => (
-          <div>
+          <div key={i}>
             <div className="flex items-center  justify-between">
               <div className="flex gap-1 items-center">
                 <RatingTemp rating={4} />

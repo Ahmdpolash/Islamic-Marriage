@@ -97,7 +97,7 @@ const KaziOfficeReview = () => {
 
       <div className=" w-full mt-5 lg:mt-10 lg:w-[60%]">
         {[1, 2, 3].map((r, i) => (
-          <div className="border rounded-md border-slate-300 mb-4 p-4">
+          <div key={i} className="border rounded-md border-slate-300 mb-4 p-4">
             <div className="flex items-center gap-3">
               <Image
                 height={40}
