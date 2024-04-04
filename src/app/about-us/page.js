@@ -88,7 +88,7 @@ const AboutUs = () => {
                 Contact with guardians
               </h2>
               <p>
-                If someone likes your biodata or you like someone's biodata you
+                If someone likes your biodata or you like someone biodata you
                 can directly contact their parent.
               </p>
             </div>
