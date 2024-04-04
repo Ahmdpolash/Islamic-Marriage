@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
-import { FaCartShopping, FaUser } from "react-icons/fa6";
+import {  FaUser } from "react-icons/fa6";
+import { IoCartOutline } from "react-icons/io5";
 
 import logo from "../../assets/logo.png";
 import Image from "next/image";
@@ -83,7 +84,7 @@ const Navbar = () => {
       <div className="border-b shadow-md">
         <Container>
           <div className="flex  justify-between items-center">
-            <Link href='/'>
+            <Link href="/">
               {" "}
               <div className="logo">
                 <Image
@@ -134,7 +135,7 @@ const Navbar = () => {
                 <ul className="lg:flex lg:gap-3">
                   {navList}
                   <button className="hidden lg:flex items-center gap-1 lg:ml-4 ">
-                    <FaCartShopping className=" text-[22px] " />
+                    <IoCartOutline className=" text-[23px] " />
                   </button>
                 </ul>
               </div>
