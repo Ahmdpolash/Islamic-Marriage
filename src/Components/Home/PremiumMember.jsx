@@ -32,6 +32,9 @@ const PremiumMember = () => {
           modules={[Pagination]}
           className="mySwiper h-full  "
           breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
             375: {
               slidesPerView: 2,
             },
