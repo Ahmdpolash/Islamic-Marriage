@@ -22,6 +22,7 @@ module.exports = {
         purple: "var(--purple)",
         borderColor: "var(--borderColor)",
         primaryPurple: "var(--primaryPurple)",
+        violet: "var(--violet)",
       },
       keyframes: {
         "accordion-down": {
