@@ -1,16 +1,10 @@
-import {
-  BookOpen,
-  HandHelping,
-  HomeIcon,
-  LogIn,
-  MessageCircleWarning,
-  Pencil,
-  Send,
-  Settings,
-  ShoppingBag,
-  Star,
-  User,
-} from "lucide-react";
+import { Settings, ThumbsDown } from "lucide-react";
+import { RxDashboard } from "react-icons/rx";
+import { FiEdit3 } from "react-icons/fi";
+import { TbMessage2Heart } from "react-icons/tb";
+import { PiHandbagSimple } from "react-icons/pi";
+import { BsInfoSquare } from "react-icons/bs";
+import { MdLogout } from "react-icons/md";
 
 // side bar
 export const sidebarList = [
@@ -18,41 +12,41 @@ export const sidebarList = [
     id: 1,
     title: "Dashboard",
     link: "/profile",
-    icon: <HomeIcon className="" />,
+    icon: <RxDashboard className="text-[22px]" />,
   },
   {
     id: 2,
     title: "Edit Biodata",
     link: "/profile/edit-biodata",
-    icon: <Pencil className="" />,
+    icon: <FiEdit3 className="text-[23px]" />,
   },
   {
     id: 3,
     title: "Favorites List",
     link: "/profile/favorites-list",
     link1: "",
-    icon: <Star className="" />,
+    icon: <TbMessage2Heart className="text-[23px]" />,
   },
   {
     id: 4,
     title: "List of dislikes",
     link: "/profile/list-of-dislikes",
     link1: "",
-    icon: <Send className="" />,
+    icon: <ThumbsDown className="text-[22px]" />,
   },
   {
     id: 5,
     title: "My Purchases",
     link: "/profile/my-purchases",
     link1: "",
-    icon: <BookOpen className="" />,
+    icon: <PiHandbagSimple className="text-[24px]" />,
   },
   {
     id: 6,
     title: "Support & Reports",
     link: "/profile/support-reports",
     link1: "",
-    icon: <MessageCircleWarning className="" />,
+    icon: <BsInfoSquare className="text-[21px]" />,
   },
   {
     id: 7,
@@ -66,13 +60,9 @@ export const sidebarList = [
     id: 8,
     title: "Logout",
     link: "/",
-    icon: <LogIn className="" />,
+    icon: <MdLogout className="text-[23px]" />,
   },
 ];
-
-
-
-
 
 // profile tab list
 export const tabList = [

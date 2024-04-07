@@ -5,9 +5,10 @@
 @layer base {
   :root {
     --dark: #000000;
+    --deepDark: #121212;
     --purple: #522b79;
     --borderColor: #2d1843;
     --primaryPurple: #9a236f;
-    --violet: #3E205B
+    --violet: #3e205b;
   }
 }

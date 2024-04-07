@@ -171,7 +171,7 @@ const Footer = () => {
             <div className="w-[30%]">
               <div className="h-[2px]  w-full bg-[#111] my-2"></div>
             </div>
-            <p className="text-center w-[40%]">Copyright @2024</p>
+            <p className="text-center w-[40%]">@Copyright all right reserverd by <b>Islamic marriage</b>.</p>
             <div className="w-[30%]">
               <div className="h-[2px]  w-full bg-[#111] my-2"></div>
             </div>

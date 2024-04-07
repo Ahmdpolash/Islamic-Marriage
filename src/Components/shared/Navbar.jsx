@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
-import {  FaUser } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
+import { sidebarList } from "../../lib/data";
 
 import logo from "../../assets/logo.png";
 import Image from "next/image";
@@ -13,6 +14,7 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -81,9 +83,9 @@ const Navbar = () => {
           !open ? "invisible" : "visible"
         } w-screen h-screen backdrop-blur-sm top-0 left-0 z-10`}
       ></div>
-      <div className="border-b shadow-md">
+      <div className="border-b  shadow-md">
         <Container>
-          <div className="flex  justify-between items-center">
+          <div className="flex relative  justify-between items-center">
             <Link href="/">
               {" "}
               <div className="logo">
@@ -123,13 +125,16 @@ const Navbar = () => {
 
               <ul className="flex  flex-col p-5 gap-5 text-[18px]">
                 {navList}
-                <button className=" flex justify-center items-center gap-1 lg:ml-4 border py-[6px] px-4 border-[#522B79] rounded-md  text-[#6D194F]">
+                <button
+                  onClick={() => setOpenDropdown(!openDropdown)}
+                  className=" flex justify-center items-center gap-1 lg:ml-4 border py-[6px] px-4 border-[#522B79] rounded-md  text-[#6D194F]"
+                >
                   <FaUser className="text-[#6D194F] text-[18px] " /> Profile
                 </button>
               </ul>
             </div>
 
-            <div className="flex  items-center gap-5">
+            <div className="flex   items-center gap-5">
               {/* Desktop menu */}
               <div className="hidden lg:block">
                 <ul className="lg:flex lg:gap-3">
@@ -140,8 +145,11 @@ const Navbar = () => {
                 </ul>
               </div>
 
-              <div className="flex items-center">
-                <button className="hidden lg:flex items-center gap-1 lg:ml-4 border py-[6px] px-4 border-[#522B79] rounded-md  text-[#6D194F]">
+              <div className="flex  items-center">
+                <button
+                  onClick={() => setOpenDropdown(!openDropdown)}
+                  className="hidden lg:flex items-center gap-1 lg:ml-4 border py-[6px] px-4 border-[#522B79] rounded-md  text-[#6D194F]"
+                >
                   <FaUser className="text-[#6D194F] text-[18px] " /> Profile
                 </button>
 
@@ -151,6 +159,27 @@ const Navbar = () => {
                 />
               </div>
             </div>
+
+            {/* dropdown */}
+            {openDropdown && (
+              <div className=" bg-[#F6D9EC] duration-300 transition-all ease-in-out rounded-md z-[999999999] p-4 h w-[250px] absolute right-0 top-12">
+                <ul className="">
+                  {sidebarList.map((item) => (
+                    <li key={item.id} className="py-2">
+                      <Link
+                        href={item.link}
+                        className="flex items-center gap-2 "
+                      >
+                        <span className="bg-[#E7E7E7] p-[4px] rounded-md">
+                          {item.icon}
+                        </span>{" "}
+                        <span className="">{item.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </Container>
       </div>

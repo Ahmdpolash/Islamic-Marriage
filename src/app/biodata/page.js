@@ -1,16 +1,64 @@
+"use client";
 import Image from "next/image";
 import user from "../../assets/biodata.png";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { useState } from "react";
 
 const Biodata = () => {
+  const [tab, setTab] = useState("filters");
+
   return (
     <div className="my-4 px-4 lg:px-7">
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
-        <div className="h-72 border w-full col-span-1"></div>
+      <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-7">
+        <div className=" w-full col-span-1">
+          <div>
+            {/* tabs */}
+            <div className="bg-[#E6E6E6] rounded-sm  cursor-pointer p-3 flex justify-center items-center w-full">
+              <div
+                onClick={() => setTab("filters")}
+                className={`${
+                  tab === "filters" ? "bg-white text-dark" : "text-slate-600"
+                } w-full mx-auto text-center rounded-md  font-medium  p-1`}
+              >
+                <span>Filters</span>
+              </div>
+              <div
+                onClick={() => setTab("biodata")}
+                className={`${
+                  tab === "biodata" ? "bg-white text-dark" : "text-slate-600"
+                } w-full mx-auto text-center rounded-md  font-medium  p-1`}
+              >
+                <span>Biodata No</span>
+              </div>
+            </div>
+
+            <div>
+              {tab === "filters" && (
+                <div className="py-2">
+                  <div className="flex my-2 justify-between items-center">
+                    <button className="py-[6px] px-5 flex border border-[#AE4F8C] gap-1 items-center rounded-md bg-[#AE4F8C] text-white">
+                      Search
+                    </button>
+                    <button
+                      className="py-[6px] px-5 flex gap-1 items-center rounded-md border text-[#AE4F8C] border-[#AE4F8C]
+                    "
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {tab === "biodata" && (
+                <div className="py-2 text-center">biodata number</div>
+              )}
+            </div>
+          </div>
+        </div>
 
         {/* right content */}
 
-        <div className="  w-full col-span-4 p-5">
+        <div className="  w-full col-span-4 ">
           <div className="space-y-2">
             <h1 className="font-bold tracking-wide text-violet text-xl lg:text-2xl">
               Biodata
@@ -22,7 +70,7 @@ const Biodata = () => {
 
           <div className="my-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, i) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, i) => (
                 <div
                   key={i}
                   className="border rounded-lg shadow-md border-slate-300"
