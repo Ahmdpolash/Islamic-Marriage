@@ -162,10 +162,16 @@ const Navbar = () => {
 
             {/* dropdown */}
             {openDropdown && (
-              <div className=" bg-[#F6D9EC] duration-300 transition-all ease-in-out rounded-md z-[999999999] p-4 h w-[250px] absolute right-0 top-12">
+              <div className=" bg-[#F6D9EC] duration-300 fixed  transition-all ease-in-out rounded-md z-[999999999]  h w-[250px] lg:absolute right-4 lg:right-0 top-12">
+                <span
+                  onClick={() => setOpenDropdown(false)}
+                  className="flex lg:hidden cursor-pointer justify-end items-end mr-4 mt-2"
+                >
+                  <RxCross1 className="text-right " />
+                </span>
                 <ul className="">
                   {sidebarList.map((item) => (
-                    <li key={item.id} className="py-2">
+                    <li key={item.id} className="py-2 p-4 hover:bg-[#f2b0de]">
                       <Link
                         href={item.link}
                         className="flex items-center gap-2 "

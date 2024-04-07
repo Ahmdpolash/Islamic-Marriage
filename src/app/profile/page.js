@@ -81,7 +81,7 @@ const Dashboard = () => {
         <div className="hover:bg-violet group hover:shadow-violet/70 border  cursor-pointer shadow-md rounded-lg border-slate-200 duration-300  py-3 px-4">
           <div className="space-y-2  flex justify-between items-center">
             <div>
-              <TbMessage2Heart className="text-[28px] text-[#522B79] " />
+              <TbMessage2Heart className="text-[30px] group-hover:text-white text-[#522B79] " />
             </div>
             <div className="space-y-2 text-right">
               <h1 className="text-xl  text-purple lg:text-2xl font-semibold group-hover:text-white">
@@ -101,7 +101,7 @@ const Dashboard = () => {
         <div className="hover:bg-violet group hover:shadow-violet/70 border  cursor-pointer shadow-md rounded-lg border-slate-200 duration-300  py-3 px-4">
           <div className="space-y-2  flex justify-between items-center">
             <div>
-              <ThumbsDown className="text-[28px] text-[#522B79] " />
+              <ThumbsDown className="text-[30px] group-hover:text-white text-[#522B79] " />
             </div>
             <div className="space-y-2 text-right">
               <h1 className="text-xl  text-purple lg:text-2xl font-semibold group-hover:text-white">
@@ -121,7 +121,7 @@ const Dashboard = () => {
         <div className="hover:bg-violet group hover:shadow-violet/70 border  cursor-pointer shadow-md rounded-lg border-slate-200 duration-300  py-3 px-4">
           <div className="space-y-2  flex justify-between items-center">
             <div>
-              <PiHandbagSimple className="text-[28px] text-[#522B79] " />
+              <PiHandbagSimple className="text-[30px] group-hover:text-white text-[#522B79] " />
             </div>
             <div className="space-y-2 text-right">
               <h1 className="text-xl  text-purple lg:text-2xl font-semibold group-hover:text-white">

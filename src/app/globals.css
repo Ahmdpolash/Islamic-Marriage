@@ -12,3 +12,9 @@
     --violet: #3e205b;
   }
 }
+
+/* .gradient {
+  background-image: linear-gradient(to right, #09e5e5 0%, #8efa6d 100%);
+  --background-clip: text;
+  --webkit-text-fill-color: transparent;
+} */
