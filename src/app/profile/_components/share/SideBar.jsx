@@ -3,19 +3,18 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { sidebarList } from "../.././../../lib/data";
-import { User } from "lucide-react";
+
 import { usePathname } from "next/navigation";
-import { user } from "../../../../assets/profile/user.png";
+import { user } from "../../../../assets/member/men.png";
 import { FaUser } from "react-icons/fa";
 import { useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import { FaList } from "react-icons/fa6";
-// import CustomBtn from "../../../../components/share/CustomBtn";
 
 export default function SideBar() {
   const [open, setOpen] = useState(false);
   const path = usePathname();
-  // console.log()
+
   return (
     <div className="relative">
       <div className="block absolute left-5 top-2 bg-purple px-2 py-[5px] rounded-md lg:hidden ">
@@ -29,11 +28,11 @@ export default function SideBar() {
         <div>
           <div className="mt-5">
             <Image
-              src={user}
-              alt="user"
+              src={"https://i.ibb.co/wNF6JXp/user.png"}
               width={100}
               height={100}
-              className="rounded-full w-[60px] h-[60px] object-cover mx-auto"
+              alt="user"
+              className="rounded-full w-[70px] h-[70px] object-cover mx-auto"
             />
           </div>
 
@@ -80,7 +79,7 @@ export default function SideBar() {
             className="px-4 top-1 text-violet py-2 text-3xl font-semibold flex absolute right-0 "
             onClick={() => setOpen(false)}
           >
-            <RxCross1  className="text-violet"/>
+            <RxCross1 className="text-violet" />
           </button>
         </div>
 
